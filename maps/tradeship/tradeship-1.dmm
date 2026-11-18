@@ -189,7 +189,19 @@
 /area/ship/trade/maintenance/eva)
 "ax" = (
 /obj/effect/floor_decal/corner/beige,
-/obj/machinery/mining_drill,
+/obj/structure/table,
+/obj/item/tool/shovel{
+	pixel_x = -5
+	},
+/obj/item/tool/shovel{
+	pixel_x = -5
+	},
+/obj/item/tool/pickaxe{
+	pixel_x = 5
+	},
+/obj/item/tool/pickaxe{
+	pixel_x = 5
+	},
 /turf/floor/tiled,
 /area/ship/trade/cargo/lower)
 "ay" = (
@@ -509,10 +521,7 @@
 /obj/structure/handrail{
 	dir = 4
 	},
-/obj/structure/closet/crate/plastic,
-/obj/random/accessory,
-/obj/random/accessory,
-/obj/item/chems/glass/bucket/paint/random,
+/obj/machinery/floodlight,
 /turf/floor/tiled/monotile,
 /area/ship/trade/cargo/lower)
 "bf" = (
@@ -941,6 +950,10 @@
 	icon_state = "1-2"
 	},
 /obj/structure/disposalpipe/segment,
+/obj/structure/sign/directions/dorms{
+	dir = 4;
+	pixel_x = 31
+	},
 /turf/floor/plating,
 /area/ship/trade/maintenance/lower)
 "cm" = (
@@ -1216,7 +1229,6 @@
 /turf/floor/tiled/steel_grid,
 /area/ship/trade/cargo/lower)
 "dh" = (
-/obj/structure/stairs/long/east,
 /obj/effect/floor_decal/industrial/warning{
 	dir = 1;
 	icon_state = "warning"
@@ -1224,6 +1236,7 @@
 /obj/structure/railing/mapped{
 	dir = 1
 	},
+/obj/structure/stairs/long/catwalk/east,
 /turf/floor/tiled,
 /area/ship/trade/cargo/lower)
 "di" = (
@@ -1899,10 +1912,11 @@
 "gb" = (
 /obj/effect/floor_decal/industrial/outline/yellow,
 /obj/structure/closet/crate,
-/obj/random/loot,
-/obj/random/tech_supply,
-/obj/random/tech_supply,
-/obj/random/advdevice,
+/obj/item/fossil/skull,
+/obj/item/fossil/animal,
+/obj/item/fossil/animal,
+/obj/item/fossil,
+/obj/item/strangerock,
 /turf/floor/tiled/monotile,
 /area/ship/trade/cargo/lower)
 "gc" = (
@@ -2254,13 +2268,13 @@
 /turf/floor/tiled/white,
 /area/ship/trade/artifact_storage)
 "od" = (
-/obj/structure/ore_box,
 /obj/effect/floor_decal/corner/beige{
 	dir = 6
 	},
 /obj/machinery/light{
 	dir = 4
 	},
+/obj/machinery/mining_drill,
 /turf/floor/tiled,
 /area/ship/trade/cargo/lower)
 "oC" = (
@@ -2427,15 +2441,6 @@
 	},
 /turf/floor/tiled/white,
 /area/ship/trade/science/fabricaton)
-"ui" = (
-/obj/structure/closet/crate,
-/obj/item/strangerock,
-/obj/item/fossil,
-/obj/item/fossil/animal,
-/obj/item/fossil/animal,
-/obj/item/fossil/skull,
-/turf/floor/tiled,
-/area/ship/trade/cargo/lower)
 "uj" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
@@ -2713,6 +2718,7 @@
 /obj/structure/window/reinforced{
 	dir = 1
 	},
+/obj/structure/ore_box,
 /turf/floor/tiled,
 /area/ship/trade/cargo/lower)
 "Db" = (
@@ -2780,6 +2786,10 @@
 /obj/structure/cable{
 	icon_state = "1-8"
 	},
+/obj/structure/sign/directions/dorms{
+	dir = 4;
+	pixel_x = 31
+	},
 /turf/floor/plating,
 /area/ship/trade/maintenance/lower)
 "Fw" = (
@@ -2831,7 +2841,7 @@
 /turf/floor/tiled/steel_grid,
 /area/ship/trade/cargo/lower)
 "HH" = (
-/obj/structure/ladder,
+/obj/item/stool/padded,
 /turf/floor/tiled,
 /area/ship/trade/cargo/lower)
 "HY" = (
@@ -2858,6 +2868,7 @@
 /obj/item/radio/intercom{
 	pixel_y = 20
 	},
+/obj/item/briefcase,
 /turf/floor/lino,
 /area/ship/trade/crew/dorms2)
 "Ic" = (
@@ -2942,7 +2953,6 @@
 	dir = 1;
 	level = 2
 	},
-/obj/item/briefcase,
 /obj/machinery/firealarm{
 	dir = 1;
 	pixel_y = -21
@@ -2950,10 +2960,12 @@
 /turf/floor/lino,
 /area/ship/trade/crew/dorms2)
 "Lx" = (
-/obj/effect/decal/cleanable/dirt/visible,
-/obj/item/stool/padded,
+/obj/structure/sign/department/eva{
+	pixel_y = -32;
+	dir = 1
+	},
 /turf/floor/tiled,
-/area/ship/trade/cargo/lower)
+/area/ship/trade/maintenance/lower)
 "LA" = (
 /obj/effect/wallframe_spawn/reinforced,
 /obj/machinery/door/blast/regular/open{
@@ -2994,6 +3006,9 @@
 	icon_state = "1-2"
 	},
 /obj/effect/decal/cleanable/dirt/visible,
+/obj/structure/sign/department/xenoarch{
+	pixel_x = -31
+	},
 /turf/floor/tiled,
 /area/ship/trade/maintenance/lower)
 "Mx" = (
@@ -3005,6 +3020,7 @@
 /obj/item/radio/intercom{
 	pixel_y = 20
 	},
+/obj/structure/hygiene/drain,
 /turf/floor/tiled/dark,
 /area/ship/trade/drunk_tank)
 "Nc" = (
@@ -3365,8 +3381,15 @@
 /obj/effect/floor_decal/industrial/outline/yellow,
 /obj/random/accessory,
 /obj/random/accessory,
-/obj/machinery/floodlight,
 /obj/random/soap,
+/obj/structure/closet/crate/plastic,
+/obj/item/chems/glass/bucket/paint/random,
+/obj/random/accessory,
+/obj/random/accessory,
+/obj/random/advdevice,
+/obj/random/tech_supply,
+/obj/random/tech_supply,
+/obj/random/loot,
 /turf/floor/tiled/monotile,
 /area/ship/trade/cargo/lower)
 "Zs" = (
@@ -6633,7 +6656,7 @@ Sx
 CN
 rB
 du
-ui
+aU
 bf
 bw
 bM
@@ -6714,7 +6737,7 @@ he
 he
 lw
 aU
-Lx
+du
 Zd
 bg
 bx
@@ -6728,7 +6751,7 @@ di
 hI
 ao
 dV
-On
+Lx
 ed
 ee
 gc
@@ -6889,7 +6912,7 @@ Ab
 ao
 ao
 ao
-Ab
+ao
 ao
 Vb
 rW
