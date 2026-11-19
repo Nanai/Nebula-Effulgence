@@ -1876,7 +1876,6 @@
 "ez" = (
 /obj/effect/floor_decal/corner/red/diagonal,
 /obj/effect/decal/cleanable/dirt/visible,
-/obj/structure/closet/secure_closet/freezer/kitchen,
 /turf/floor/tiled,
 /area/ship/trade/crew/kitchen)
 "eA" = (
@@ -2318,7 +2317,7 @@
 	icon_state = "1-2"
 	},
 /turf/floor/tiled/techfloor/grid,
-/area/ship/trade/maintenance/engineering)
+/area/ship/trade/maintenance/dronebay)
 "fz" = (
 /obj/machinery/light,
 /obj/item/flashlight,
@@ -2537,13 +2536,13 @@
 	icon_state = "4-10"
 	},
 /turf/floor/plating,
-/area/ship/trade/maintenance/engineering)
+/area/ship/trade/maintenance/dronebay)
 "ge" = (
 /obj/structure/cable{
 	icon_state = "5-8"
 	},
 /turf/floor/plating,
-/area/ship/trade/maintenance/engineering)
+/area/ship/trade/maintenance/dronebay)
 "gg" = (
 /obj/effect/paint/brown,
 /turf/wall/r_wall,
@@ -2561,8 +2560,9 @@
 "gk" = (
 /obj/effect/decal/cleanable/dirt/visible,
 /obj/random/trash,
-/obj/machinery/light/small/emergency{
-	dir = 8
+/obj/machinery/light/small/red{
+	dir = 8;
+	icon_state = "bulb1"
 	},
 /turf/floor/tiled/techmaint,
 /area/ship/trade/maintenance/engine/port)
@@ -2841,7 +2841,7 @@
 	icon_state = "4-8"
 	},
 /turf/floor/plating,
-/area/ship/trade/maintenance/engineering)
+/area/ship/trade/maintenance/dronebay)
 "hi" = (
 /obj/effect/decal/cleanable/dirt/visible,
 /obj/structure/cable{
@@ -4565,7 +4565,7 @@
 /area/ship/trade/crew/hallway/starboard)
 "mb" = (
 /turf/wall/r_wall,
-/area/ship/trade/maintenance/engineering)
+/area/ship/trade/maintenance/dronebay)
 "mc" = (
 /obj/effect/wallframe_spawn/reinforced,
 /obj/machinery/door/blast/regular/open{
@@ -4858,7 +4858,7 @@
 	pixel_y = 20
 	},
 /turf/floor/plating,
-/area/ship/trade/maintenance/engineering)
+/area/ship/trade/maintenance/dronebay)
 "pe" = (
 /obj/item/radio,
 /obj/machinery/atmospherics/pipe/simple/hidden/fuel{
@@ -4937,9 +4937,8 @@
 	pixel_x = 24;
 	dir = 8
 	},
-/obj/machinery/portable_atmospherics/canister/air,
 /turf/floor/plating,
-/area/ship/trade/maintenance/engineering)
+/area/ship/trade/maintenance/dronebay)
 "qc" = (
 /obj/item/radio/intercom{
 	dir = 8;
@@ -5068,8 +5067,9 @@
 /turf/floor/plating,
 /area/ship/trade/shieldbay)
 "rb" = (
-/obj/machinery/light/small/emergency{
-	dir = 4
+/obj/machinery/light/small/red{
+	dir = 4;
+	icon_state = "bulb1"
 	},
 /obj/effect/decal/cleanable/dirt/visible,
 /obj/structure/catwalk,
@@ -5159,7 +5159,10 @@
 	dir = 4
 	},
 /turf/floor/plating,
-/area/ship/trade/maintenance/engineering)
+/area/ship/trade/maintenance/dronebay)
+"sd" = (
+/turf/wall,
+/area/ship/trade/maintenance/dronebay)
 "se" = (
 /obj/effect/paint/brown,
 /turf/wall/r_wall,
@@ -5198,6 +5201,7 @@
 	dir = 8
 	},
 /obj/effect/decal/cleanable/dirt/visible,
+/obj/structure/window/reinforced,
 /turf/floor/plating,
 /area/ship/trade/maintenance/engine/starboard)
 "sm" = (
@@ -5223,7 +5227,7 @@
 /obj/machinery/atmospherics/unary/engine{
 	dir = 1
 	},
-/turf/floor/plating/airless,
+/turf/floor/plating,
 /area/space)
 "sA" = (
 /obj/machinery/door/airlock/hatch,
@@ -5242,6 +5246,7 @@
 /obj/machinery/light/spot{
 	dir = 8
 	},
+/obj/structure/closet/secure_closet/freezer/kitchen,
 /turf/open,
 /area/ship/trade/cargo)
 "sG" = (
@@ -5281,7 +5286,7 @@
 /area/ship/trade/hidden)
 "sY" = (
 /turf/floor/plating,
-/area/ship/trade/maintenance/engineering)
+/area/ship/trade/maintenance/dronebay)
 "sZ" = (
 /obj/structure/lattice,
 /obj/structure/handrail{
@@ -5440,7 +5445,7 @@
 	icon_state = "4-8"
 	},
 /turf/floor/tiled/techfloor/grid,
-/area/ship/trade/maintenance/engineering)
+/area/ship/trade/maintenance/dronebay)
 "vc" = (
 /obj/machinery/alarm{
 	dir = 4;
@@ -5556,7 +5561,7 @@
 	},
 /obj/machinery/door/airlock/hatch/autoname/engineering,
 /turf/floor/tiled/steel_ridged,
-/area/ship/trade/maintenance/engineering)
+/area/ship/trade/maintenance/dronebay)
 "we" = (
 /obj/effect/paint/brown,
 /turf/wall/r_wall/hull,
@@ -5703,7 +5708,7 @@
 /area/space)
 "yb" = (
 /turf/floor/tiled/techfloor/grid,
-/area/ship/trade/maintenance/engineering)
+/area/ship/trade/maintenance/dronebay)
 "yc" = (
 /obj/machinery/chem_master,
 /obj/item/radio/intercom{
@@ -5738,6 +5743,8 @@
 	dir = 8
 	},
 /obj/effect/decal/cleanable/dirt/visible,
+/obj/structure/window/reinforced,
+/obj/structure/window/reinforced,
 /turf/floor/plating,
 /area/ship/trade/maintenance/engine/starboard)
 "yt" = (
@@ -6363,6 +6370,9 @@
 	},
 /obj/structure/catwalk,
 /obj/effect/decal/cleanable/dirt/visible,
+/obj/machinery/atmospherics/pipe/simple/hidden/fuel{
+	dir = 4
+	},
 /turf/floor/plating,
 /area/ship/trade/maintenance/engine/port)
 "EQ" = (
@@ -6601,6 +6611,7 @@
 /obj/structure/handrail{
 	dir = 4
 	},
+/obj/structure/window/reinforced,
 /turf/floor/plating,
 /area/ship/trade/maintenance/engine/port)
 "HA" = (
@@ -7276,6 +7287,9 @@
 /obj/machinery/door/firedoor{
 	dir = 4
 	},
+/obj/machinery/atmospherics/pipe/simple/hidden/fuel{
+	dir = 4
+	},
 /turf/floor/tiled/techmaint,
 /area/ship/trade/maintenance/engine/starboard)
 "Og" = (
@@ -7369,8 +7383,9 @@
 	icon_state = "1-8"
 	},
 /obj/structure/catwalk,
-/obj/machinery/light/small/emergency{
-	dir = 4
+/obj/machinery/light/small/red{
+	dir = 4;
+	icon_state = "bulb1"
 	},
 /turf/floor/plating,
 /area/ship/trade/maintenance/engine/starboard)
@@ -7623,6 +7638,7 @@
 /obj/machinery/atmospherics/pipe/manifold/visible/fuel{
 	dir = 4
 	},
+/obj/structure/window/reinforced,
 /turf/floor/plating,
 /area/ship/trade/maintenance/engine/port)
 "Sb" = (
@@ -7646,7 +7662,7 @@
 	},
 /obj/machinery/drone_fabricator,
 /turf/floor/plating,
-/area/ship/trade/maintenance/engineering)
+/area/ship/trade/maintenance/dronebay)
 "Sg" = (
 /obj/machinery/light,
 /obj/machinery/light_switch{
@@ -7740,9 +7756,11 @@
 	icon_state = "1-2"
 	},
 /obj/effect/decal/cleanable/dirt/visible,
-/obj/machinery/light/small/emergency{
-	dir = 8
+/obj/machinery/light/small/red{
+	dir = 8;
+	icon_state = "bulb1"
 	},
+/obj/structure/catwalk,
 /turf/floor/plating,
 /area/ship/trade/maintenance/engine/port)
 "Tb" = (
@@ -7784,6 +7802,7 @@
 	icon_state = "1-2"
 	},
 /obj/effect/decal/cleanable/dirt/visible,
+/obj/structure/catwalk,
 /turf/floor/plating,
 /area/ship/trade/maintenance/engine/port)
 "Tx" = (
@@ -7827,7 +7846,7 @@
 "Uc" = (
 /obj/machinery/recharge_station,
 /turf/floor/tiled/techfloor/grid,
-/area/ship/trade/maintenance/engineering)
+/area/ship/trade/maintenance/dronebay)
 "Ue" = (
 /obj/structure/handrail{
 	dir = 4
@@ -7927,8 +7946,9 @@
 	name = "south bump";
 	pixel_y = -22
 	},
+/obj/machinery/portable_atmospherics/canister/air,
 /turf/floor/tiled/techfloor/grid,
-/area/ship/trade/maintenance/engineering)
+/area/ship/trade/maintenance/dronebay)
 "Vd" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /turf/floor/laminate,
@@ -8031,7 +8051,7 @@
 	},
 /obj/machinery/portable_atmospherics/canister/oxygen,
 /turf/floor/plating,
-/area/ship/trade/maintenance/engineering)
+/area/ship/trade/maintenance/dronebay)
 "Wp" = (
 /obj/machinery/cryopod/lifepod,
 /obj/machinery/door/window/southright,
@@ -8109,7 +8129,7 @@
 	dir = 8
 	},
 /turf/floor/plating,
-/area/ship/trade/maintenance/engineering)
+/area/ship/trade/maintenance/dronebay)
 "Xc" = (
 /obj/machinery/atmospherics/binary/pump/on{
 	dir = 8
@@ -10779,7 +10799,7 @@ fE
 fU
 go
 yA
-hG
+sd
 Sc
 sb
 hf
@@ -10861,7 +10881,7 @@ fE
 wU
 vS
 gA
-hG
+sd
 sY
 WO
 ge
@@ -10943,7 +10963,7 @@ fE
 Mc
 gp
 gB
-hG
+sd
 pb
 gd
 yb
@@ -11110,8 +11130,8 @@ fE
 mb
 mb
 wb
-hG
-hG
+sd
+sd
 hF
 hP
 ie

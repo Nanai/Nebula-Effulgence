@@ -181,6 +181,10 @@
 	name = "\improper Parts Storage"
 	icon_state = "engineering_supply"
 
+/area/ship/trade/maintenance/dronebay
+	name = "\improper Drone Bay"
+	icon_state = "engineering_supply"
+
 /area/ship/trade/maintenance/eva
 	name = "\improper EVA Storage"
 	icon_state = "eva"

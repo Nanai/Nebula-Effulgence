@@ -331,11 +331,13 @@
 	dir = 4;
 	icon_state = "warning"
 	},
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/effect/floor_decal/corner/beige{
 	dir = 9
 	},
 /obj/effect/decal/cleanable/dirt/visible,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 10
+	},
 /turf/floor/tiled/steel_grid,
 /area/ship/trade/loading_bay)
 "aI" = (
@@ -740,7 +742,14 @@
 /obj/structure/cable{
 	icon_state = "0-8"
 	},
-/obj/machinery/biogenerator,
+/obj/structure/table,
+/obj/item/chems/glass/bucket,
+/obj/item/chems/glass/bottle/eznutrient,
+/obj/item/plantspray/pests,
+/obj/machinery/newscaster{
+	pixel_x = 32;
+	dir = 4
+	},
 /turf/floor/tiled,
 /area/ship/trade/garden)
 "bE" = (
@@ -1477,14 +1486,9 @@
 /turf/wall/r_wall/hull,
 /area/ship/trade/disused)
 "vi" = (
-/obj/machinery/newscaster{
-	pixel_x = 32;
-	dir = 4
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 5
 	},
-/obj/structure/table,
-/obj/item/plantspray/pests,
-/obj/item/chems/glass/bottle/eznutrient,
-/obj/item/chems/glass/bucket,
 /turf/floor/tiled,
 /area/ship/trade/garden)
 "vy" = (
@@ -1548,6 +1552,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
 	},
+/obj/machinery/portable_atmospherics/hydroponics,
 /turf/floor/tiled,
 /area/ship/trade/garden)
 "xy" = (
@@ -1691,6 +1696,13 @@
 	},
 /turf/floor/tiled,
 /area/ship/trade/garden)
+"Cp" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 10
+	},
+/obj/machinery/biogenerator,
+/turf/floor/tiled,
+/area/ship/trade/garden)
 "Dt" = (
 /obj/abstract/level_data_spawner/tradeship_basement,
 /turf/space,
@@ -1700,7 +1712,6 @@
 	dir = 4;
 	icon_state = "warning"
 	},
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/effect/floor_decal/corner/beige{
 	dir = 9
 	},
@@ -1947,7 +1958,6 @@
 /obj/structure/cable{
 	icon_state = "1-2"
 	},
-/obj/machinery/portable_atmospherics/hydroponics,
 /obj/effect/floor_decal/corner/blue{
 	dir = 1
 	},
@@ -2041,9 +2051,6 @@
 /obj/effect/floor_decal/corner/beige{
 	dir = 9
 	},
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 10
-	},
 /turf/floor/tiled/steel_grid,
 /area/ship/trade/loading_bay)
 "MY" = (
@@ -2073,6 +2080,7 @@
 	pixel_x = 24;
 	dir = 8
 	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /turf/floor/tiled,
 /area/ship/trade/garden)
 "OH" = (
@@ -5196,7 +5204,7 @@ al
 af
 sO
 yT
-Jz
+Cp
 NR
 vi
 bD
@@ -5278,9 +5286,9 @@ yO
 ag
 cd
 yT
+aU
+yT
 KZ
-yT
-yT
 yT
 yT
 ug
