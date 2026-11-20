@@ -4132,6 +4132,7 @@
 #include "maps\~unit_tests\unit_testing.dm"
 #include "mods\_modpack.dm"
 #include "mods\species\anthrope\anthrope.dme"
+#include "mods\species\yd\yd.dme"
 #include "mods\~compatibility\~compatibility.dm"
 #include "~code\global_init.dm"
 // END_INCLUDE

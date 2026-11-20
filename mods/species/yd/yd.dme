@@ -1,0 +1,8 @@
+#ifndef MODPACK_YD_SPECIES
+#define MODPACK_YD_SPECIES
+// BEGIN_INCLUDE
+#include "_yd.dm"
+#include "datum\species_bodytype.dm"
+#include "datum\species.dm"
+// END_INCLUDE
+#endif
