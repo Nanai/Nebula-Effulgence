@@ -16,9 +16,12 @@
 		to_chat(src, SPAN_NOTICE("Coming in a future update!"))
 		return
 
-	var/decl/species/anthrope/anthrope_species = species
-	var/decl/bodytype/admixture_feminine = GET_DECL(anthrope_species.admix_bodytype_feminine)
-	var/decl/bodytype/admixture_masculine = GET_DECL(anthrope_species.admix_bodytype_masculine)
+	var/decl/bodytype/human/anthrope/root_bodytype = get_bodytype()
+	if(!istype(root_bodytype))
+		to_chat(src, SPAN_WARNING("Your Anthrope bodytype is not available right now."))
+		return
+	var/decl/bodytype/admixture_feminine = GET_DECL(root_bodytype.admix_bodytype_feminine)
+	var/decl/bodytype/admixture_masculine = GET_DECL(root_bodytype.admix_bodytype_masculine)
 	var/decl/bodytype/target_admixture = (get_gender() == MALE) ? admixture_masculine : admixture_feminine
 	if(!istype(admixture_feminine) || !istype(admixture_masculine) || !istype(target_admixture))
 		to_chat(src, SPAN_WARNING("Your Admix form is not available right now."))

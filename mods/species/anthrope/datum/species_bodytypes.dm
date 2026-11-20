@@ -5,8 +5,17 @@
 	heat_level_3 = 1020
 	heat_discomfort_level = 335
 
+	var/anthrope_variant
+	var/admix_bodytype_feminine
+	var/admix_bodytype_masculine
+
 /decl/bodytype/human/anthrope/feline
-	name = "feminine"
+	name = "feline feminine"
+	pref_name = "feminine"
+	associated_gender = FEMALE
+	anthrope_variant = "feline"
+	admix_bodytype_feminine = /decl/bodytype/human/anthrope/admixture/feline_feminine
+	admix_bodytype_masculine = /decl/bodytype/human/anthrope/admixture/feline_masculine
 	uid = "bodytype_anthrope_feline_fem"
 	default_sprite_accessories = list(
 		SAC_EARS = list(/decl/sprite_accessory/ears/anthrope/feline = list()),
@@ -14,7 +23,8 @@
 	)
 
 /decl/bodytype/human/anthrope/feline/masculine
-	name = "masculine"
+	name = "feline masculine"
+	pref_name = "masculine"
 	associated_gender = MALE
 	icon_base = 'icons/mob/human_races/species/human/body_male.dmi'
 	icon_deformed = 'icons/mob/human_races/species/human/deformed_body_male.dmi'
@@ -22,7 +32,12 @@
 	uid = "bodytype_anthrope_feline_masc"
 
 /decl/bodytype/human/anthrope/canid
-	name = "feminine"
+	name = "canid feminine"
+	pref_name = "feminine"
+	associated_gender = FEMALE
+	anthrope_variant = "canid"
+	admix_bodytype_feminine = /decl/bodytype/human/anthrope/admixture/canid_feminine
+	admix_bodytype_masculine = /decl/bodytype/human/anthrope/admixture/canid_masculine
 	uid = "bodytype_anthrope_canid_fem"
 	default_sprite_accessories = list(
 		SAC_EARS = list(/decl/sprite_accessory/ears/anthrope/canid = list()),
@@ -30,7 +45,8 @@
 	)
 
 /decl/bodytype/human/anthrope/canid/masculine
-	name = "masculine"
+	name = "canid masculine"
+	pref_name = "masculine"
 	associated_gender = MALE
 	icon_base = 'icons/mob/human_races/species/human/body_male.dmi'
 	icon_deformed = 'icons/mob/human_races/species/human/deformed_body_male.dmi'
@@ -38,7 +54,12 @@
 	uid = "bodytype_anthrope_canid_masc"
 
 /decl/bodytype/human/anthrope/fox
-	name = "feminine"
+	name = "fox feminine"
+	pref_name = "feminine"
+	associated_gender = FEMALE
+	anthrope_variant = "fox"
+	admix_bodytype_feminine = /decl/bodytype/human/anthrope/admixture/canid_feminine
+	admix_bodytype_masculine = /decl/bodytype/human/anthrope/admixture/canid_masculine
 	uid = "bodytype_anthrope_fox_fem"
 	default_sprite_accessories = list(
 		SAC_EARS = list(/decl/sprite_accessory/ears/anthrope/fox = list()),
@@ -46,7 +67,8 @@
 	)
 
 /decl/bodytype/human/anthrope/fox/masculine
-	name = "masculine"
+	name = "fox masculine"
+	pref_name = "masculine"
 	associated_gender = MALE
 	icon_base = 'icons/mob/human_races/species/human/body_male.dmi'
 	icon_deformed = 'icons/mob/human_races/species/human/deformed_body_male.dmi'
@@ -66,6 +88,7 @@
 	icon_base = 'mods/species/anthrope/icons/feline_dark_body_female_admix.dmi'
 	icon_deformed = 'mods/species/anthrope/icons/feline_dark_body_female_admix.dmi'
 	associated_gender = FEMALE
+	anthrope_variant = "feline"
 	uid = "bodytype_anthrope_feline_admix_fem"
 
 /decl/bodytype/human/anthrope/admixture/feline_masculine
@@ -73,6 +96,7 @@
 	icon_base = 'mods/species/anthrope/icons/feline_dark_body_male_admix.dmi'
 	icon_deformed = 'mods/species/anthrope/icons/feline_dark_body_male_admix.dmi'
 	associated_gender = MALE
+	anthrope_variant = "feline"
 	uid = "bodytype_anthrope_feline_admix_masc"
 
 /decl/bodytype/human/anthrope/admixture/canid_feminine
@@ -80,6 +104,7 @@
 	icon_base = 'mods/species/anthrope/icons/canid_dark_body_female_admix.dmi'
 	icon_deformed = 'mods/species/anthrope/icons/canid_dark_body_female_admix.dmi'
 	associated_gender = FEMALE
+	anthrope_variant = "canid"
 	uid = "bodytype_anthrope_canid_admix_fem"
 
 /decl/bodytype/human/anthrope/admixture/canid_masculine
@@ -87,4 +112,5 @@
 	icon_base = 'mods/species/anthrope/icons/canid_dark_body_male_admix.dmi'
 	icon_deformed = 'mods/species/anthrope/icons/canid_dark_body_male_admix.dmi'
 	associated_gender = MALE
+	anthrope_variant = "canid"
 	uid = "bodytype_anthrope_canid_admix_masc"

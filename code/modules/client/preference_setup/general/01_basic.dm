@@ -1,6 +1,7 @@
 /datum/preferences
 	var/gender = MALE					//gender of character (well duh)
 	var/bodytype
+	var/anthrope_type = "feline"
 	var/spawnpoint = "Default" 			//where this character will spawn (0-2).
 	var/real_name						//our character's name
 	var/be_random_name = 0				//whether we are a random name every round
@@ -98,6 +99,10 @@
 	. += "<b>Bodytype:</b> "
 	var/decl/species/S = pref.get_species_decl()
 	for(var/decl/bodytype/B in S.available_bodytypes)
+		if(istype(S, /decl/species/anthrope))
+			var/decl/bodytype/human/anthrope/anthrope_bodytype = B
+			if(!istype(anthrope_bodytype) || anthrope_bodytype.anthrope_variant != pref.anthrope_type)
+				continue
 		if(B.name == pref.bodytype)
 			. += "<span class='linkOn'>[capitalize(B.pref_name)]</span>"
 		else
@@ -164,6 +169,10 @@
 	else if(href_list["bodytype"])
 		var/decl/bodytype/new_body = locate(href_list["bodytype"])
 		if(istype(new_body) && CanUseTopic(user) && (new_body in S.available_bodytypes))
+			if(istype(S, /decl/species/anthrope))
+				var/decl/bodytype/human/anthrope/anthrope_bodytype = new_body
+				if(!istype(anthrope_bodytype) || anthrope_bodytype.anthrope_variant != pref.anthrope_type)
+					return TOPIC_NOACTION
 			pref.set_bodytype(new_body.name)
 			if(get_config_value(/decl/config/toggle/on/cisnormativity) && new_body.associated_gender) // Let servers stuck in the 2010s set bodytype default to avoid "confusing" people
 				pref.gender = new_body.associated_gender
