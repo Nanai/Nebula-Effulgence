@@ -1,6 +1,7 @@
 /decl/species/anthrope
 	name = "Anthrope"
 	name_plural = "Anthropes"
+	description = "One of three confirmable human derivates across habitable planets, the Anthropes of Terra show their bioengineering most visibly in animalistic traits across their humanoid forms. Redirected neural pathways show a complete psionic redirect to fuel metabolism shifts and inner biokinesis, allowing them to shift between intermediate states of species imprinted on them from ages ago. While fanciful mythological depictions of the rite exist, the actual tools to make new strains of Anthrope are lost to antiquity. While predatory species of anthrope tend to be some of the more upper class and ranking, anthropes come in a diaspora of species that have slowly sublimated between bloodlines or caused fertility issues against breeding. Finding the humans of Gaia through sent out space probes, the various nations and polities of Terra have boldly pressed into space- Where, admittedly, they have found their adaptions less advantageous until the time comes for planetary expeditions. Accordingly, many have sent their best (or most determined) to join GASC efforts."
 	uid = "species_anthrope"
 	spawn_flags = SPECIES_CAN_JOIN
 	inherent_verbs = list(/mob/living/human/proc/change_anthrope_form)
@@ -24,7 +25,7 @@
 
 /decl/species/anthrope/Initialize()
 	allow_specific_sprite_accessories = list()
-	var/list/hair_styles = decls_repository.get_decls_of_subtype(/decl/sprite_accessory/hair)
+	var/list/hair_styles = decls_repository.get_decls_of_subtype(/decl/sprite_accessory/hair)c
 	for(var/hair_style in hair_styles)
 		var/decl/sprite_accessory/hair/hair_accessory = hair_styles[hair_style]
 		if(hair_accessory?.species_allowed && (/decl/species/human::uid in hair_accessory.species_allowed))

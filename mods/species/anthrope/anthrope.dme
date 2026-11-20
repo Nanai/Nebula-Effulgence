@@ -2,10 +2,17 @@
 #define MODPACK_ANTHROPE_SPECIES
 // BEGIN_INCLUDE
 #include "_anthrope.dm"
+#include "datum\character_setup.dm"
+#include "datum\species.dm"
 #include "datum\species_bodytypes.dm"
 #include "datum\sprite_accessories.dm"
-#include "datum\species.dm"
-#include "datum\character_setup.dm"
 #include "verbs\shape_change.dm"
 // END_INCLUDE
 #endif
+// BEGIN_INTERNALS
+// END_INTERNALS
+// BEGIN_FILE_DIR
+#define FILE_DIR .
+// END_FILE_DIR
+// BEGIN_PREFERENCES
+// END_PREFERENCES
