@@ -1,17 +1,17 @@
 /datum/map/tradeship
 	name = "Tradeship"
-	full_name = "Tradeship Ocelot Alpha"
+	full_name = "Global Assembly Vessel Lamplighter"
 	path = "tradeship"
 	ground_noun = "deck"
 
-	station_name  = "Tradeship Ocelot Alpha"
-	station_short = "Ocelot"
+	station_name  = "GAV Lamplighter"
+	station_short = "Lamplighter"
 
-	dock_name     = "FTS Capitalist's Rest"
-	boss_name     = "FTU Merchant Navy"
+	dock_name     = "FTS Harbor"
+	boss_name     = "Global Assembly Stellar Commission"
 	boss_short    = "Merchant Admiral"
-	company_name  = "Legit Cargo Ltd."
-	company_short = "LC"
+	company_name  = "Global Assembly"
+	company_short = "GA"
 	lobby_screens = list('maps/tradeship/lobby/bloodmoney.png','maps/tradeship/lobby/vapormoney.png')
 	overmap_ids = list(OVERMAP_ID_SPACE)
 	num_exoplanets = 1
@@ -29,5 +29,5 @@
 	default_telecomms_channels = list(COMMON_FREQUENCY_DATA)
 
 /datum/map/tradeship/get_map_info()
-	return "You're aboard the <b>[station_name],</b> a survey and mercantile vessel affiliated with the Free Trade Union. \
-	No meaningful authorities can claim the planets and resources in this uncharted sector, so their exploitation is entirely up to you - mine, poach and deforest all you want."
+	return "You're aboard the <b>[station_name],</b> a cheap and efficient survey vehicle obtained. \
+	by the Gaian Global Assembly. Do your best to explore space with a substandard vehicle."
