@@ -18,7 +18,8 @@
 		/decl/bodytype/human/alfar/masculine
 	)
 	preview_outfit = /decl/outfit/job/generic/assistant
-
+	available_accessory_categories = list(
+		SAC_HAIR)
 /decl/species/alfar/handle_post_species_pref_set(datum/preferences/pref)
 	. = ..()
 	if(!islist(pref.sprite_accessories))
@@ -42,3 +43,12 @@
 	if(!selected_ear)
 		selected_ear = GET_DECL(/decl/sprite_accessory/ears/alfar/pointed)
 	ear_accessories[selected_ear.type] = selected_ear.get_default_accessory_metadata()
+
+/decl/species/anthrope/Initialize()
+	allow_specific_sprite_accessories = list()
+	var/list/hair_styles = decls_repository.get_decls_of_subtype(/decl/sprite_accessory/hair)c
+	for(var/hair_style in hair_styles)
+		var/decl/sprite_accessory/hair/hair_accessory = hair_styles[hair_style]
+		if(hair_accessory?.species_allowed && (/decl/species/human::uid in hair_accessory.species_allowed))
+			allow_specific_sprite_accessories += hair_style
+	return ..()
