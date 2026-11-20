@@ -14,3 +14,6 @@
 #ifdef MODPACK_ALFAR_SPECIES
 #include "psionics/alfar_psi.dm"
 #endif
+#ifdef MODPACK_ANTHROPE_SPECIES
+#include "psionics/anthrope_psi.dm"
+#endif
