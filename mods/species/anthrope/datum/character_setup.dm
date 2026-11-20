@@ -1,3 +1,6 @@
+/datum/preferences
+	var/anthrope_start_admix = FALSE
+
 /datum/category_item/player_setup_item/background/anthrope_type
 	name = "Anthrope Type"
 	sort_order = 2
@@ -66,3 +69,33 @@
 	if(istype(expected_bodytype))
 		pref.bodytype = expected_bodytype.name
 		expected_bodytype.handle_post_bodytype_pref_set(pref)
+
+/datum/category_item/player_setup_item/physical/anthrope_start_form
+	name = "Anthrope Starting Form"
+	sort_order = 3
+
+/datum/category_item/player_setup_item/physical/anthrope_start_form/preload_character(datum/pref_record_reader/reader)
+	pref.anthrope_start_admix = !!reader.read("anthrope_start_admix")
+
+/datum/category_item/player_setup_item/physical/anthrope_start_form/save_character(datum/pref_record_writer/writer)
+	writer.write("anthrope_start_admix", pref.anthrope_start_admix)
+
+/datum/category_item/player_setup_item/physical/anthrope_start_form/content(mob/user)
+	var/decl/species/anthrope/species = pref.get_species_decl()
+	if(!istype(species))
+		return
+	. = "<b>Start in Admix:</b> <a href='byond://?src=\ref[src];toggle_start_admix=1'>[pref.anthrope_start_admix ? "Yes" : "No"]</a>"
+
+/datum/category_item/player_setup_item/physical/anthrope_start_form/OnTopic(href, list/href_list, mob/user)
+	if(!href_list["toggle_start_admix"] || !CanUseTopic(user))
+		return TOPIC_NOACTION
+	var/decl/species/anthrope/species = pref.get_species_decl()
+	if(!istype(species))
+		return TOPIC_NOACTION
+	pref.anthrope_start_admix = !pref.anthrope_start_admix
+	return TOPIC_REFRESH_UPDATE_PREVIEW
+
+/datum/category_item/player_setup_item/physical/anthrope_start_form/apply_post_snapshot_preferences(mob/living/human/character, is_preview_copy = FALSE)
+	if(!character || !istype(character.species, /decl/species/anthrope))
+		return
+	character.apply_anthrope_form(pref.anthrope_start_admix)

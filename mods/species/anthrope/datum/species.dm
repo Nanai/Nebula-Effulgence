@@ -4,6 +4,14 @@
 	uid = "species_anthrope"
 	spawn_flags = SPECIES_CAN_JOIN
 	inherent_verbs = list(/mob/living/human/proc/change_anthrope_form)
+	available_accessory_categories = list(
+		SAC_HAIR,
+		SAC_FACIAL_HAIR,
+		SAC_EARS,
+		SAC_TAIL,
+		SAC_COSMETICS,
+		SAC_MARKINGS
+	)
 	available_bodytypes = list(
 		/decl/bodytype/human/anthrope/feline,
 		/decl/bodytype/human/anthrope/feline/masculine,
