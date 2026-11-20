@@ -25,7 +25,7 @@
 
 /decl/species/anthrope/Initialize()
 	allow_specific_sprite_accessories = list()
-	var/list/hair_styles = decls_repository.get_decls_of_subtype(/decl/sprite_accessory/hair)c
+	var/list/hair_styles = decls_repository.get_decls_of_subtype(/decl/sprite_accessory/hair)
 	for(var/hair_style in hair_styles)
 		var/decl/sprite_accessory/hair/hair_accessory = hair_styles[hair_style]
 		if(hair_accessory?.species_allowed && (/decl/species/human::uid in hair_accessory.species_allowed))
