@@ -1,0 +1,11 @@
+#ifndef MODPACK_ANTHROPE_SPECIES
+#define MODPACK_ANTHROPE_SPECIES
+// BEGIN_INCLUDE
+#include "_anthrope.dm"
+#include "datum\species_bodytypes.dm"
+#include "datum\sprite_accessories.dm"
+#include "datum\species.dm"
+#include "datum\character_setup.dm"
+#include "verbs\shape_change.dm"
+// END_INCLUDE
+#endif

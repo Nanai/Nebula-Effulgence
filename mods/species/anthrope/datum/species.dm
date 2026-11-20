@@ -58,6 +58,9 @@
 			return appearance_bodytype.get_body_temperature_threshold(threshold)
 	return ..()
 
+/decl/species/anthrope/legacy
+	abstract_type = /decl/species/anthrope/legacy
+
 /decl/species/anthrope/legacy/feline
 	name = "Feline Anthrope"
 	uid = "species_anthrope_feline"

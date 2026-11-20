@@ -9,7 +9,9 @@
 	species_allowed = list(/decl/species/anthrope::uid)
 	bodytypes_allowed = list(
 		/decl/bodytype/human/anthrope/feline,
-		/decl/bodytype/human/anthrope/feline/masculine
+		/decl/bodytype/human/anthrope/feline/masculine,
+		/decl/bodytype/human/anthrope/admixture/feline_feminine,
+		/decl/bodytype/human/anthrope/admixture/feline_masculine
 	)
 	uid = "acc_ears_anthrope_feline"
 
@@ -20,7 +22,9 @@
 	species_allowed = list(/decl/species/anthrope::uid)
 	bodytypes_allowed = list(
 		/decl/bodytype/human/anthrope/canid,
-		/decl/bodytype/human/anthrope/canid/masculine
+		/decl/bodytype/human/anthrope/canid/masculine,
+		/decl/bodytype/human/anthrope/admixture/canid_feminine,
+		/decl/bodytype/human/anthrope/admixture/canid_masculine
 	)
 	uid = "acc_ears_anthrope_canid"
 
@@ -31,13 +35,22 @@
 	species_allowed = list(/decl/species/anthrope::uid)
 	bodytypes_allowed = list(
 		/decl/bodytype/human/anthrope/fox,
-		/decl/bodytype/human/anthrope/fox/masculine
+		/decl/bodytype/human/anthrope/fox/masculine,
+		/decl/bodytype/human/anthrope/admixture/fox_feminine,
+		/decl/bodytype/human/anthrope/admixture/fox_masculine
 	)
 	uid = "acc_ears_anthrope_fox"
 
 /decl/sprite_accessory/tail/anthrope
 	abstract_type = /decl/sprite_accessory/tail/anthrope
-	color_blend = null
+	color_blend = ICON_MULTIPLY
+
+/decl/sprite_accessory/tail/anthrope/Initialize()
+	. = ..()
+	LAZYREMOVE(accessory_metadata_types, SAM_COLOR)
+
+/decl/sprite_accessory/tail/anthrope/get_default_accessory_metadata()
+	return list(SAM_COLOR = "#303030")
 
 /decl/sprite_accessory/tail/anthrope/feline
 	name = "Feline Tail"
@@ -46,7 +59,9 @@
 	species_allowed = list(/decl/species/anthrope::uid)
 	bodytypes_allowed = list(
 		/decl/bodytype/human/anthrope/feline,
-		/decl/bodytype/human/anthrope/feline/masculine
+		/decl/bodytype/human/anthrope/feline/masculine,
+		/decl/bodytype/human/anthrope/admixture/feline_feminine,
+		/decl/bodytype/human/anthrope/admixture/feline_masculine
 	)
 	uid = "acc_tail_anthrope_feline"
 
@@ -58,8 +73,12 @@
 	bodytypes_allowed = list(
 		/decl/bodytype/human/anthrope/canid,
 		/decl/bodytype/human/anthrope/canid/masculine,
+		/decl/bodytype/human/anthrope/admixture/canid_feminine,
+		/decl/bodytype/human/anthrope/admixture/canid_masculine,
 		/decl/bodytype/human/anthrope/fox,
-		/decl/bodytype/human/anthrope/fox/masculine
+		/decl/bodytype/human/anthrope/fox/masculine,
+		/decl/bodytype/human/anthrope/admixture/fox_feminine,
+		/decl/bodytype/human/anthrope/admixture/fox_masculine
 	)
 	uid = "acc_tail_anthrope_canid"
 
@@ -67,18 +86,30 @@
 	bodytypes_denied = list(
 		/decl/bodytype/human/anthrope/feline,
 		/decl/bodytype/human/anthrope/feline/masculine,
+		/decl/bodytype/human/anthrope/admixture/feline_feminine,
+		/decl/bodytype/human/anthrope/admixture/feline_masculine,
 		/decl/bodytype/human/anthrope/canid,
 		/decl/bodytype/human/anthrope/canid/masculine,
+		/decl/bodytype/human/anthrope/admixture/canid_feminine,
+		/decl/bodytype/human/anthrope/admixture/canid_masculine,
 		/decl/bodytype/human/anthrope/fox,
-		/decl/bodytype/human/anthrope/fox/masculine
+		/decl/bodytype/human/anthrope/fox/masculine,
+		/decl/bodytype/human/anthrope/admixture/fox_feminine,
+		/decl/bodytype/human/anthrope/admixture/fox_masculine
 	)
 
 /decl/sprite_accessory/tail/none
 	bodytypes_denied = list(
 		/decl/bodytype/human/anthrope/feline,
 		/decl/bodytype/human/anthrope/feline/masculine,
+		/decl/bodytype/human/anthrope/admixture/feline_feminine,
+		/decl/bodytype/human/anthrope/admixture/feline_masculine,
 		/decl/bodytype/human/anthrope/canid,
 		/decl/bodytype/human/anthrope/canid/masculine,
+		/decl/bodytype/human/anthrope/admixture/canid_feminine,
+		/decl/bodytype/human/anthrope/admixture/canid_masculine,
 		/decl/bodytype/human/anthrope/fox,
-		/decl/bodytype/human/anthrope/fox/masculine
+		/decl/bodytype/human/anthrope/fox/masculine,
+		/decl/bodytype/human/anthrope/admixture/fox_feminine,
+		/decl/bodytype/human/anthrope/admixture/fox_masculine
 	)
