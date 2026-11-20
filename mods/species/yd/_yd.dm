@@ -40,6 +40,10 @@
 	yd_borer.host_brain.SetName(real_name)
 	yd_borer.host_brain.real_name = real_name
 
+	var/obj/machinery/cryopod/pod = loc
+	if(istype(pod) && pod.occupant == src)
+		pod.go_out()
+
 	var/datum/mind/yd_mind = mind
 	yd_mind.transfer_to(yd_borer)
 
@@ -48,16 +52,6 @@
 
 /mob/living/simple_animal/borer/Login()
 	. = ..()
-	if(mind && !neutered)
+	if(mind && !neutered && !yd_possessed)
 		var/decl/special_role/borer/borers = GET_DECL(/decl/special_role/borer)
-		borers.add_antagonist(mind, do_not_equip = yd_possessed)
-
-/decl/special_role/borer/create_objectives(var/datum/mind/player)
-	var/mob/living/simple_animal/borer/borer = player.current
-	if(istype(borer) && borer.yd_possessed)
-		return TRUE
-	if(!..())
-		return
-	player.objectives += new /datum/objective/borer_survive()
-	player.objectives += new /datum/objective/borer_reproduce()
-	player.objectives += new /datum/objective/escape()
+		borers.add_antagonist(mind)
